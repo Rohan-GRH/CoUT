@@ -1,6 +1,5 @@
 system_prompt: |
-  Answer the question directly with a number without unit.
-  Do not return any preamble, explanation, or reasoning.
+  Return the answer at the end of the response after a separator ####.
 format: |
   Q: {question}
   A: {answer}

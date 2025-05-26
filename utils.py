@@ -16,8 +16,17 @@ class Config(BaseModel):
     fewshot: List[Example]
 
 
-def load_config(task: Literal["gsm8k", "date"], config: Literal["baseline", "cot", "cod"]) -> Config:
-    with open(f"./configs/{task}_{config}.yaml") as f:
+def load_config(task: str, config: Literal["baseline", "cot", "cod", "CoUT"]) -> Config:
+    
+    # 处理bigbench子任务，提取子任务名称
+    if task.startswith("bigbench_"):
+        # 提取bigbench后面的所有内容作为子任务名称
+        subtask = task[len("bigbench_"):]
+        config_path = f"./configs/bigbench_{subtask}_{config}.yaml"
+    else:
+        config_path = f"./configs/{task}_{config}.yaml"
+    
+    with open(config_path, encoding="utf-8") as f:
         return Config.model_validate(yaml.safe_load(f))
 
 

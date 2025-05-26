@@ -1,0 +1,19 @@
+system_prompt: |
+  Return the final answer(A/B/C/D/E) at the end of the response after a separator ####.
+
+format: |
+  Q: {question}
+  A: {answer}
+fewshot: 
+  - question: |
+      Triangle ABC has a right angle at C. If AB = 39 and AC = 15, then BC =
+    answer: |
+      Pythagorean. 39² = 15² + BC². BC = 36. #### 36
+  - question: |
+      In how many ways can 7 identical red chips and 7 identical blue chips be arranged in a row so that no two blue chips are adjacent?
+    answer: |
+      Blue must separate reds. Need 8 spots. C(8,7) = 8. #### 8
+  - question: |
+      In a certain year, the number of days in February is the same as the number of days in January. If the year is not a leap year, then the number of days in April of that year is:
+    answer: |
+      Regular months have 30/31 days. April has 30 days. #### 30 

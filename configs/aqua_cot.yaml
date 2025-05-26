@@ -1,0 +1,9 @@
+system_prompt: |
+  Think step by step to answer the following question. 
+  Return the final answer(A/B/C/D/E) at the end of the response after a separator ####.
+
+format: |
+  Q: {question}
+  A: {answer}
+
+fewshot: [] 

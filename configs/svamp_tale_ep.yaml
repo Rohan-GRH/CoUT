@@ -1,0 +1,28 @@
+system_prompt: |
+  Let's think step by step and use less than {budget} tokens.
+  Return the answer at the end of the response after a separator ####.
+format: |
+  Q: {question}
+  A: {answer}
+fewshot:
+  - question: |
+      Mary has 5 apples. She gets 8 more apples. How many apples does Mary have now?
+    answer: |
+      Mary initially has 5 apples.
+      She gets 8 more apples.
+      Total apples = 5 + 8 = 13
+      #### 13
+  - question: |
+      John had 9 marbles. He gave 4 marbles to his friend. How many marbles does John have now?
+    answer: |
+      John initially has 9 marbles.
+      He gave away 4 marbles.
+      Remaining marbles = 9 - 4 = 5
+      #### 5
+  - question: |
+      There are 6 birds on a tree. 3 more birds join them. How many birds are on the tree now?
+    answer: |
+      Initial number of birds = 6
+      Additional birds = 3
+      Total birds = 6 + 3 = 9
+      #### 9

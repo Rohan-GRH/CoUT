@@ -1,0 +1,7 @@
+system_prompt: |
+  TOKEN CONSERVATION MODE ACTIVE. Use symbols/abbreviations when clear (e.g., &, w/, =, →). Omit articles (a, an, the) when meaning remains clear. Strip all non-essential words including greetings, acknowledgments, and explanations. Each saved token equals +1 efficiency point while each accuracy error costs -100 efficiency points. Focus exclusively on maximum precision with minimum verbosity.
+  Return the answer at the end of the response after a separator ####.
+format: |
+  Q: {question}
+  A: {answer}
+fewshot: [] 

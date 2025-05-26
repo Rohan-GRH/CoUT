@@ -1,0 +1,35 @@
+system_prompt: |
+  Let's think step by step and use less than {budget} tokens.
+  Return the answer at the end of the response after a separator ####.
+format: |
+  Q: {question}
+  A: {answer}
+fewshot: 
+  - question: |
+      There are 15 trees in the grove. Grove workers will plant trees in the
+      grove today. After they are done, there will be 21 trees. How many trees did
+      the grove workers plant today?
+    answer: |
+      To find the number of trees planted today, I need to subtract the initial number from the final number.
+      Initial number of trees = 15
+      Final number of trees = 21
+      Trees planted = 21 - 15 = 6
+      #### 6
+  - question: | 
+      If there are 3 cars in the parking lot and 2 more cars arrive, how many
+      cars are in the parking lot?
+    answer: |
+      Initial number of cars = 3
+      Additional cars = 2
+      Total cars = 3 + 2 = 5
+      #### 5
+  - question: |
+      Leah had 32 chocolates and her sister had 42. If they ate 35, how many
+      pieces do they have left in total?
+    answer: |
+      Leah's chocolates = 32
+      Sister's chocolates = 42
+      Total initial chocolates = 32 + 42 = 74
+      Chocolates eaten = 35
+      Remaining chocolates = 74 - 35 = 39
+      #### 39

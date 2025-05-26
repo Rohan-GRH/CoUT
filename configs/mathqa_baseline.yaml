@@ -1,0 +1,8 @@
+system_prompt: |
+  Return the final answer(A/B/C/D/E) at the end of the response after a separator ####.
+
+format: |
+  Q: {question}
+  A: {answer}
+
+fewshot: [] 

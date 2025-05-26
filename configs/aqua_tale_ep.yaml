@@ -1,0 +1,29 @@
+system_prompt: |
+  Let's think step by step and use less than {budget} tokens.
+  Return the final answer(A/B/C/D/E) at the end of the response after a separator ####.
+format: |
+  Q: {question}
+  A: {answer}
+fewshot:
+  - question: |
+      Alice has 5 oranges. Bob gives her 8 oranges. How many oranges does Alice have now?
+    answer: |
+      Alice initially has 5 oranges.
+      Bob gives her 8 more oranges.
+      So Alice now has 5 + 8 = 13 oranges.
+      #### 13
+  - question: |
+      Tom needs to read a 100-page book. He reads 25 pages each day. How many days will it take him to finish the book?
+    answer: |
+      Tom needs to read 100 pages.
+      Tom reads 25 pages per day.
+      100 ÷ 25 = 4
+      It will take Tom 4 days to finish the book.
+      #### 4
+  - question: |
+      A store sells notebooks for $3 each and pens for $2 each. Sarah buys 4 notebooks and 3 pens. How much does she spend in total?
+    answer: |
+      Cost of notebooks = 4 × $3 = $12
+      Cost of pens = 3 × $2 = $6
+      Total cost = $12 + $6 = $18
+      #### 18

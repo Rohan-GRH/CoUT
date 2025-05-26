@@ -1,0 +1,27 @@
+system_prompt: |
+  Let's think step by step and use less than {budget} tokens.
+  Return the final answer(A/B/C/D/E) at the end of the response after a separator ####.
+format: |
+  Q: {question}
+  A: {answer}
+fewshot:
+  - question: |
+      If Logan can eat 2/9 of a pizza in one minute, how many minutes would it take him to eat 3 pizzas?
+    answer: |
+      Logan eats 2/9 of a pizza in one minute.
+      For 3 pizzas, he needs to eat 3 whole pizzas.
+      3 pizzas = 3 * 9/9 = 27/9 pizzas
+      Time needed = 27/9 ÷ 2/9 = 27/9 * 9/2 = 27/2 = 13.5 minutes
+      #### 13.5
+  - question: |
+      A rectangle has a width of 8 cm and a length of 12 cm. What is the area of the rectangle?
+    answer: |
+      Area of rectangle = length × width
+      Area = 12 cm × 8 cm = 96 cm²
+      #### 96
+  - question: |
+      A train travels at a speed of 75 km/h. How far will it travel in 4 hours?
+    answer: |
+      Distance = speed × time
+      Distance = 75 km/h × 4 h = 300 km
+      #### 300
