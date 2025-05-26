@@ -132,6 +132,31 @@ fewshot:
     answer: "Sample answer"
 ```
 
+## 🔍 TALE-EP Method Special Notes
+
+**Token Usage Characteristics of TALE-EP Method**:
+
+The TALE-EP method employs a two-stage query strategy:
+1. **First Query**: Ask the large language model how many tokens might be needed to solve the problem
+2. **Second Query**: Include the estimated token count in the prompt and query the model again for actual problem solving
+
+Due to this dual-query mechanism, the TALE-EP method consumes **two times** the tokens in total.
+
+### Calculating Average Tokens for Second Query Only
+
+If you want to know the average token usage for **the second query only** in the TALE-EP method, use the `add_avg_tokens.py` tool:
+
+```bash
+python add_avg_tokens.py <path_to_generated_json_file>
+```
+
+**Example**:
+```bash
+python add_avg_tokens.py ./results/20241201/gsm8k/20241201_143022_gsm8k-gpt-4o-tale_ep_detailed.json
+```
+
+This tool will automatically add an `avg_second_query_tokens` field to the results JSON file, showing the average token consumption for the second query.
+
 ## 📈 Results Analysis
 
 The framework automatically generates comprehensive results:
