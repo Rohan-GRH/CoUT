@@ -188,7 +188,7 @@ We adopt a **zero-shot approach** (`--shot 0`) for all evaluations because:
 ## 📝 Project Structure
 
 ```
-chain-of-draft/
+CoUT/
 ├── configs/                 # Configuration files for different methods
 │   ├── {dataset}_{method}.yaml
 ├── tasks/                   # Dataset-specific task implementations
