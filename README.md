@@ -213,11 +213,6 @@ We welcome contributions! Please feel free to:
 3. Submit pull requests with enhancements
 4. Add support for new datasets or models
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
 
 ## 🙏 Acknowledgments
 
