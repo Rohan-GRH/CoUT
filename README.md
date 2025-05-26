@@ -40,7 +40,7 @@ Our framework supports evaluation on four mathematical reasoning datasets:
 1. Clone the repository:
 ```bash
 git clone https://github.com/Rohan-GRH/CoUT.git
-cd chain-of-draft
+cd CoUT
 ```
 
 2. Install dependencies:
