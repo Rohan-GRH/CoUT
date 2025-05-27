@@ -204,6 +204,21 @@ CoUT/
 └── requirements.txt        # Python dependencies
 ```
 
+## 📚 Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@misc{gong2025efficientreasoningchainunconscious, 
+       title={Efficient Reasoning via Chain of Unconscious Thought},  
+       author={Ruihan Gong and Yue Liu and Wenjie Qu and Mingzhe Du and Yufei He and Yingwei Ma and Yulin Chen and Xiang Liu and Yi Wen and Xinfeng Li and Ruidong Wang and Xinzhong Zhu and Bryan Hooi and Jiaheng Zhang}, 
+       year={2025}, 
+       eprint={2505.19756}, 
+       archivePrefix={arXiv}, 
+       primaryClass={cs.CL}, 
+       url={https://arxiv.org/abs/2505.19756}
+}
+
 ## 🤝 Contributing
 
 We welcome contributions! Please feel free to:
